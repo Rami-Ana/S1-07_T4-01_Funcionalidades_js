@@ -1,6 +1,13 @@
 test('11_set-1: has an add method and a has method', () => {
   // Crea un nou Set anomenat 'mySet'
   // Afegeix els números 1, 2 i 3 al set
+  //set no necesita crear la clase como molde porque es una clase nativa (built-in) del lenguaje
+//===Comprobar que Set permite añadir valores
+  const mySet = new Set(); //guardamos en una constante una instancia
+
+  mySet.add(1);
+  mySet.add(2);
+  mySet.add(3);
 
   expect(mySet.has(1)).toBe(true)
   expect(mySet.has(2)).toBe(true)
@@ -11,7 +18,14 @@ test('11_set-1: has an add method and a has method', () => {
 test('11_set-2: doesn`t allow duplicates', () => {
   // Crea un nou Set
   // Afegeix els següents números al set utilitzant set.add(num): 1, 1, 1
+// ===Comprobar que Set no acepta duplicados
 
+const mySet = new Set();
+
+  mySet.add(1);
+  mySet.add(1);
+  mySet.add(1);
+  
   expect(mySet.has(1)).toBe(true)
   expect(mySet.has(2)).toBe(false)
   expect(mySet.has(3)).toBe(false)
