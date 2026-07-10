@@ -24,7 +24,7 @@ test('14_promises-1: should resolve', () => {
     .then(
       result => {
         // comprova el valor resolt de la promesa
-        expect(result).toBe(/* INTRODUEIX LA TEVA RESPOSTA AQUÍ */)
+        expect(result).toBe('ripe apple')
       },
       error => {
         throw new Error("aquest bloc no s'hauria d'executar")
@@ -40,7 +40,7 @@ test('14_promises-2: should reject', () => {
       },
       error => {
         // comprova el missatge de l’error rebutjat
-        expect(error.message).toBe(/* INTRODUEIX LA TEVA RESPOSTA AQUÍ */)
+        expect(error.message).toBe('unripe apple')
       },
     )
 })
@@ -52,7 +52,7 @@ test('14_promises-3: errors can be caught', () => {
     })
     .catch(error => {
       // comprova el missatge de l’error capturat
-      expect(error.message).toBe(/* INTRODUEIX LA TEVA RESPOSTA AQUÍ */)
+      expect(error.message).toBe('out of apples')
     })
 })
 
